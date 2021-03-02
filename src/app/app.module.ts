@@ -7,6 +7,7 @@ import { HeaderComponent } from "./shared/components/header/header.component";
 import { FooterComponent } from "./shared/components/footer/footer.component";
 import { LoginComponent } from "./components/login/login.component";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SearchFlightComponent } from './components/search-flight/search-flight.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -15,7 +16,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    SearchFlightComponent
   ],
   bootstrap: [AppComponent]
 })
