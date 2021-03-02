@@ -57,7 +57,7 @@
 					</div>
 				</div>
 				<div class="table-body">
-					<div class="resp-table-row">
+					<div class="resp-table-row" *ngFor="let flight of flightList">
 
 						<div class="table-body-cell">
 							<div class="pull-left airline-info">
@@ -66,77 +66,38 @@
                     style="background-image: url(&quot;https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/6E.png?v=5&quot;);"></span></span>
 								</div>
 								<div class="pull-left airways-info-sect">
-									<p><span class="airways-name ">IndiGo</span></p>
-									<p class="fli-code">6E-2162</p>
+									<p><span class="airways-name ">{{flight.name}}</span></p>
+									<p class="fli-code">{{flight.id}}</p>
 								</div>
 							</div>
 						</div>
 						<div class="table-body-cell">
 							<div class="fli-time-section pull-left">
-								<div class="time">05:00</div>
-								<p class="city">New Delhi</p>
+								<div class="time">{{flight.departure.time}}</div>
+								<p class="city">{{flight.departure.city}}</p>
 							</div>
 						</div>
 						<div class="table-body-cell">
 							<div class="pull-left">
-								<p class="fli-duration"><strong>06</strong> hrs <strong>35</strong> mins</p>
+								<p class="fli-duration">{{flight.duration}}</p>
 							</div>
 						</div>
 						<div class="table-body-cell">
 							<div class="fli-time-section pull-left">
-								<div class="time">11:00</div>
-								<p class="city">Goa</p>
+								<div class="time">{{flight.arrival.time}}</div>
+								<p class="city">{{flight.arrival.city}}</p>
 							</div>
 						</div>
 						<div class="table-body-cell">
 							<div class="pull-left">
-								<p><span class="actual-price">₹ 5,103</span></p>
+								<p><span class="actual-price">₹ {{flight.price}}</span></p>
 							</div>
 						</div>
 						<div class="table-body-cell">
 							<div class="pull-left"><button id="bookbutton" class="ViewFareBtn">BOOK</button></div>
 						</div>
 					</div>
-					<div class="resp-table-row">
 
-						<div class="table-body-cell">
-							<div class="pull-left airline-info">
-								<div class="pull-left">
-									<span class=" "><span class="arln-logo logo1"
-                    style="background-image: url(&quot;https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/6E.png?v=5&quot;);"></span></span>
-								</div>
-								<div class="pull-left airways-info-sect">
-									<p><span class="airways-name ">IndiGo</span></p>
-									<p class="fli-code">6E-2162</p>
-								</div>
-							</div>
-						</div>
-						<div class="table-body-cell">
-							<div class="fli-time-section pull-left">
-								<div class="time">05:00</div>
-								<p class="city">New Delhi</p>
-							</div>
-						</div>
-						<div class="table-body-cell">
-							<div class="pull-left">
-								<p class="fli-duration"><strong>06</strong> hrs <strong>35</strong> mins</p>
-							</div>
-						</div>
-						<div class="table-body-cell">
-							<div class="fli-time-section pull-left">
-								<div class="time">11:00</div>
-								<p class="city">Goa</p>
-							</div>
-						</div>
-						<div class="table-body-cell">
-							<div class="pull-left">
-								<p><span class="actual-price">₹ 5,103</span></p>
-							</div>
-						</div>
-						<div class="table-body-cell">
-							<div class="pull-left"><button id="bookbutton" class="ViewFareBtn">BOOK</button></div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>

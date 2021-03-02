@@ -6,8 +6,9 @@ import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./shared/components/header/header.component";
 import { FooterComponent } from "./shared/components/footer/footer.component";
 import { LoginComponent } from "./components/login/login.component";
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { SearchFlightComponent } from './components/search-flight/search-flight.component';
+import { DashboardComponent } from "./components/dashboard/dashboard.component";
+import { SearchFlightComponent } from "./components/search-flight/search-flight.component";
+import { FlighListService } from "./shared/services/fligh-list.service";
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -19,6 +20,7 @@ import { SearchFlightComponent } from './components/search-flight/search-flight.
     DashboardComponent,
     SearchFlightComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [FlighListService]
 })
 export class AppModule {}

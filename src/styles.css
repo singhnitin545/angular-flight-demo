@@ -1,2 +1,10 @@
 /* Add application styles & imports to this file! */
 @import "~bootstrap/dist/css/bootstrap.css";
+body {
+  background-color: #fff;
+  background: #e0e0e0 !important;
+  font-family: "Lato", sans-serif;
+  color: #878787;
+  line-height: inherit;
+  scroll-behavior: smooth;
+}
