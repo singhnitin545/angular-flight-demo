@@ -1,0 +1,72 @@
+<div class="center">
+  <form ngForm>
+    <div class="form-group">
+      <label for="name">UserId</label>
+      <input
+        type="text"
+        name="name"
+        [(ngModel)]="newCustomer.userId"
+        class="form-control"
+        placeholder="UserId"
+      />
+    </div>
+    <div class="form-group">
+      <label for="add">Title</label>
+      <input
+        type="text"
+        name="add"
+        [(ngModel)]="newCustomer.title"
+        class="form-control"
+        placeholder="Title"
+      />
+    </div>
+    <div class="form-group">
+      <label for="age">Body</label>
+      <input
+        type="text"
+        [(ngModel)]="newCustomer.body"
+        class="form-control"
+        name="age"
+        placeholder="Body"
+      />
+    </div>
+
+    <button type="submit" (click)="submit()" class="btn btn-primary">
+      Submit
+    </button>
+  </form>
+  <br />
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#User Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cust of custs">
+        <th scope="row">{{cust.userId}}</th>
+        <td>{{cust.title}}</td>
+        <td>{{cust.body}}</td>
+        <td>
+          <button
+            type="button"
+            (click)="edit(cust.id)"
+            class="btn btn-danger btn-sm"
+          >
+            Edit
+          </button>
+          <button
+            type="button"
+            (click)="delete(cust.id)"
+            class="btn btn-warning btn-sm"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
