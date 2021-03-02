@@ -52,7 +52,8 @@ export class CustomerComponent implements OnInit {
     this.getCustomerByid(id);
   }
   delete(id) {
-    let index = this.custs.findIndex(d => d.id === id);
-    this.custs.splice(index, 1);
+    this.customerService.delete(id).subscribe(res => {
+      this.getCustomerList();
+    });
   }
 }
